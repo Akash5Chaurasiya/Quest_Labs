@@ -1,0 +1,36 @@
+/* TabBar.css */
+.tab-container {
+    display: flex;
+    width: 100%;
+    bottom: 0px;
+    position: absolute;
+}
+
+a {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    background-color: #eee;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    /* Add position relative to the anchor */
+}
+
+a.active {
+    background-color: #ddd;
+    color: black;
+}
+
+a.active::before {
+    content: '';
+    position: absolute;
+    top: 0; 
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40%;
+    height: 3px;
+    background-color: #0a0a0a;
+}
