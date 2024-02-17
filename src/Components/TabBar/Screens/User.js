@@ -4,6 +4,7 @@ import axios from 'axios'
 import Card from '../../Card'
 import useFetchData from '../../CustomHooks/useFetchData'
 import TopTabBar from '../TopTabbar'
+import Loader from '../../Loader'
 const User = () => {
     const { loading, data, cardData, badge } = useFetchData();
     const containerStyle = {
@@ -25,7 +26,7 @@ const User = () => {
         left: '35%',
     };
     if (loading) {
-        return <div>Loading....</div>
+        return <Loader />
     }
     return (
         <div style={{ flex: 1, backgroundColor: '#4f46e5', display: 'flex', flexDirection: 'column', alignItems: 'center', height: '100vh' }}>

@@ -6,13 +6,16 @@ const Badge = ({ badge }) => {
     const { windowHeight } = useDimensions();
     const [selectedImage, setSelectedImage] = useState(null);
     const [selectedId, setSelectedId] = useState(null);
-    const openModal = (image, id) => {
+    const [name, setName] = useState(null)
+    const openModal = (image, id, name) => {
         setSelectedImage(image);
         setSelectedId(id);
+        setName(name)
     };
     const closeModal = () => {
         setSelectedImage(null);
         setSelectedId(null);
+        setName(null);
     };
     const chunkArray = (arr, size) => {
         return Array.from({ length: Math.ceil(arr.length / size) }, (_, index) =>
@@ -26,11 +29,11 @@ const Badge = ({ badge }) => {
                 <div key={rowIndex} style={{ display: 'flex', justifyContent: 'space-around' }}>
                     {row.map((ele) => (
                         <img
-                            key={ele.id}
+                            key={ele.name}
                             style={{ width: '65px', height: '65px', borderRadius: '50%', cursor: 'pointer', margin: '13px' }}
                             src={ele.imageUrl}
                             alt={`Badge ${ele.id}`}
-                            onClick={() => openModal(ele.imageUrl, ele.id)}
+                            onClick={() => openModal(ele.imageUrl, ele.id, ele.name)}
                         />
                     ))}
                 </div>
@@ -78,7 +81,7 @@ const Badge = ({ badge }) => {
                             alt={`Badge ${selectedId}`}
                             style={{ height: 'auto', borderRadius: '10px', objectFit: 'fill', width: '50%', borderRadius: '50%' }}
                         />
-                        <h2 style={{ color: 'black' }}>Badge Unlocked!</h2>
+                        <h4 style={{ color: 'black' }}>{name} Badge Unlocked!</h4>
                         <p style={{ color: 'black', margin: 0 }}>Level! Up! Earned a shiny new badge!</p>
                     </div>
                 </div>

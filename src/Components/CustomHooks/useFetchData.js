@@ -26,7 +26,6 @@ const useFetchData = () => {
             const response = await axios.get('https://staging.questprotocol.xyz/api/users/u-a2399489-9cd0-4c94-ad12-568379202b08', { headers });
             const { imageUrl, name } = response?.data?.data || {};
             setData((prev) => ({ ...prev, image: imageUrl, name: name }));
-            console.log(response.data);
         } catch (error) {
             console.error('Error:', error);
         } finally {
@@ -40,7 +39,6 @@ const useFetchData = () => {
             const response = await axios.get(`https://staging.questprotocol.xyz/api/entities/e-0000000000/users/u-a2399489-9cd0-4c94-ad12-568379202b08/xp`, { headers });
             const { data, tier } = response?.data || {};
             setCardData((prev) => ({ ...prev, points: data, level: tier }));
-            console.log(data, tier);
         } catch (error) {
             console.log(error);
         }
@@ -67,7 +65,6 @@ const useFetchData = () => {
             const response = await axios.get(`https://staging.questprotocol.xyz/api/entities/e-0000000000/users/u-a2399489-9cd0-4c94-ad12-568379202b08/badges`, { headers })
             const { data } = response?.data || {};
             setBadge(data)
-            console.log(response, data);
         } catch (error) {
             console.log(error);
         } finally {
