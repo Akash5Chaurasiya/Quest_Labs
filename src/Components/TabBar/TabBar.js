@@ -30,16 +30,16 @@ const TabBar = () => {
         <div>
             {renderTabContent()}
             <div className="tab-container">
-                <a href="#" onClick={() => handleTabClick(1)} className={activeTab === 1 ? 'active' : ''}>
+                <a  href="#" onClick={() => handleTabClick(1)} className={activeTab === 1 ? 'actived' : ''}>
                     <AiFillHome color={activeTab === 1 ? "#0a0a0a" : '#71717a'} size={30} />
                 </a>
-                <a href="#" onClick={() => handleTabClick(2)} className={activeTab === 2 ? 'active' : ''}>
+                <a  href="#" onClick={() => handleTabClick(2)} className={activeTab === 2 ? 'actived' : ''}>
                     <AiOutlineSearch color={activeTab === 2 ? "#0a0a0a" : '#71717a'} size={30} />
                 </a>
-                <a href="#" onClick={() => handleTabClick(3)} className={activeTab === 3 ? 'active' : ''}>
+                <a  href="#" onClick={() => handleTabClick(3)} className={activeTab === 3 ? 'actived' : ''}>
                     <AiFillShopping color={activeTab === 3 ? "#0a0a0a" : '#71717a'} size={30} />
                 </a>
-                <a href="#" onClick={() => handleTabClick(4)} className={activeTab === 4 ? 'active' : ''}>
+                <a  href="#" onClick={() => handleTabClick(4)} className={activeTab === 4 ? 'actived' : ''}>
                     <AiOutlineUser color={activeTab === 4 ? "#0a0a0a" : '#71717a'} size={30} />
                 </a>
             </div>

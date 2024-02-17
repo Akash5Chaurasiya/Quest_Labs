@@ -19,12 +19,12 @@ a {
     /* Add position relative to the anchor */
 }
 
-a.active {
+a.actived {
     background-color: #ddd;
     color: black;
 }
 
-a.active::before {
+a.actived::before {
     content: '';
     position: absolute;
     top: 0; 
