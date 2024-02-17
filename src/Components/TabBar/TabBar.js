@@ -1,7 +1,6 @@
-// TabBar.js
 import React, { useState } from 'react';
 import { FaBeer, FaCoffee, FaCode } from "react-icons/fa";
-import './TabBar.css'; // Import the CSS file for styling
+import './TabBar.css'; 
 import { AiFillHome, AiOutlineSearch, AiFillShopping, AiOutlineUser } from "react-icons/ai";
 import Home from './Screens/Home';
 import Search from './Screens/Search';
